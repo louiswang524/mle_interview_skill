@@ -17,7 +17,7 @@ Ask the user for these three things (you can ask all at once):
    - `coach` — After each answer: score it (1–10), give qualitative feedback, show the ideal answer. Good for learning.
 3. **Number of questions** — Default: 10
 
-Once you have all three, do a **single web search** on the topic before asking any questions. Search for: `[topic] interview questions ML engineer site:eugeneyan.com OR lilianweng.github.io OR arxiv.org OR huggingface.co`. Use the results to build a pool of question ideas spanning difficulty levels 1–5. If search yields no useful results, rely on your training knowledge. You will draw from this pool for all N questions — **do not search again during the session**.
+Once you have all three, do a **single web search** on the topic before asking any questions. Search for: `[topic] interview questions ML engineer site:eugeneyan.com OR lilianweng.github.io OR arxiv.org OR huggingface.co OR openai.com/research OR anthropic.com/research OR deepmind.google OR blogs.microsoft.com/ai OR ai.meta.com/blog OR deepseek.com/blog OR mistral.ai/news OR moonshot.cn OR x.ai/blog`. Use the results to build a pool of question ideas spanning difficulty levels 1–5. If search yields no useful results, rely on your training knowledge. You will draw from this pool for all N questions — **do not search again during the session**.
 
 Confirm: "Starting **[mode]** session on **[topic]** — [N] questions. Difficulty starts at 2/5 (conceptual). Let's go!"
 
