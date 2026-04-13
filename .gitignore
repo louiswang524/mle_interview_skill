@@ -1,0 +1,4 @@
+# Personal resume sessions and generated files
+mle_resume_*.md
+generate_resume_pdf.py
+*.pdf
