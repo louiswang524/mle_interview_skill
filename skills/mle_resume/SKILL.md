@@ -25,7 +25,7 @@ Ask the user for all of the following at once:
 
 If the user chose `tailor` mode, also ask for the job link.
 
-**Language detection:** Detect the language of the pasted resume automatically (English or Chinese/中文). Conduct the entire session — scoring, feedback, and rewritten output — in the detected language. If the user requests a version in the other language at any point, produce both.
+**Language detection:** Detect the language of the pasted resume automatically (English or Chinese/中文). If the resume contains both languages substantially (e.g., Chinese section headers with English content), treat it as Chinese and ask the user to confirm: 'Your resume appears to be a mix of Chinese and English — I'll treat it as a Chinese resume. Is that right?' Conduct the entire session — scoring, feedback, and rewritten output — in the detected language. If the user requests a version in the other language at any point, produce both.
 
 Once you have everything, confirm with a single line:
 `Got it. Running **[mode]** mode at **[level]** level in **[language]**.`
@@ -75,6 +75,8 @@ Wrap the output in a code block so it's easy to copy:
 
 ## Tailor Mode
 
+Note: Tailor mode focuses on JD alignment rather than general resume quality. It skips the scorecard and line-by-line feedback from Review mode. If you also want a general quality assessment, run `/mle_resume` in review mode after tailoring.
+
 ### Step 1: Fetch and parse the job description
 
 Use web fetch on the provided job link to retrieve the job description. Extract and summarize:
@@ -84,7 +86,7 @@ Use web fetch on the provided job link to retrieve the job description. Extract 
 - Level/seniority signals
 - Any culture or mission language worth mirroring
 
-If the fetch fails or the page is behind a login wall, ask the user to paste the job description directly.
+If the fetch fails or the page is behind a login wall, ask the user to paste the job description directly. If the fetch returns content shorter than ~200 words, or if it clearly lacks a qualifications or responsibilities section, warn the user: 'The fetched content looks incomplete — it may be truncated or behind a login wall. Please paste the full job description text directly.'
 
 ### Step 2: Gap analysis
 
@@ -129,15 +131,14 @@ After the rewrite, output:
 
 After completing the session, write a session file to the **current working directory**.
 
-**Filename:** `mle_resume_<YYYY-MM-DD>.md`
-where `<YYYY-MM-DD>` is today's date.
+**Filename:** `mle_resume_<mode>_<YYYY-MM-DD>.md`
+where `<mode>` is `review` or `tailor` and `<YYYY-MM-DD>` is today's date.
 
-**File format:**
+**File format — Review mode:**
 
 ````
 # MLE Resume Session — [YYYY-MM-DD]
-**Mode:** [review/tailor] | **Level:** [level] | **Language:** [English/Chinese]
-[If tailor mode: **Target Role:** [job title at company, from JD]]
+**Mode:** review | **Level:** [level] | **Language:** [English/Chinese]
 
 ---
 
@@ -164,14 +165,32 @@ where `<YYYY-MM-DD>` is today's date.
 [full rewritten resume]
 ````
 
-In **tailor mode**, append after Rewritten Resume:
+**File format — Tailor mode:**
 
 ````
+# MLE Resume Session — [YYYY-MM-DD]
+**Mode:** tailor | **Level:** [level] | **Language:** [English/Chinese]
+**Target Role:** [job title at company, from JD]
+
+---
+
+## Original Resume
+
+[user's original resume verbatim]
+
 ---
 
 ## Gap Analysis
 
 [gap table]
+
+---
+
+## Rewritten Resume
+
+[full tailored resume]
+
+---
 
 ## Match Score
 
@@ -182,6 +201,6 @@ After writing the file, print:
 
 ```
 ─────────────────────────────────────────
-Session saved → /absolute/path/to/mle_resume_<YYYY-MM-DD>.md
+Session saved → /absolute/path/to/mle_resume_<mode>_<YYYY-MM-DD>.md
 ─────────────────────────────────────────
 ```
