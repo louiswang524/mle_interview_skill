@@ -23,6 +23,7 @@ A collection of Claude Code skills covering the full MLE/research job-hunting li
 - **Modes:**
   - **Review mode** — User pastes resume. Skill scores it across 5 dimensions: impact/quantification, ML/research relevance, clarity, ATS keyword coverage, and role-level tailoring. Gives line-by-line suggestions and outputs a full revised version.
   - **Tailor mode** — User provides a job link. Skill fetches and parses the job description via web fetch, then rewrites the resume to target that specific role (keywords, framing, prioritization of experience).
+- **Language support:** English and Chinese. Skill auto-detects resume language and responds in the same language. All scoring, feedback, and rewritten output are in the detected language. If the user requests a translation (e.g., Chinese resume for a US company), skill produces both versions.
 - **Data strategy:** Web fetch for job descriptions in tailor mode; static knowledge for scoring rubrics.
 
 #### `mle_cold_outreach`
