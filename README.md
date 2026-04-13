@@ -2,7 +2,7 @@
 
 A collection of [Claude Code](https://claude.ai/code) skills covering the full ML/AI engineering job-hunting lifecycle — from resume and cold outreach through interview preparation, offer negotiation, and offer selection.
 
-Skills work independently or chained together via the `mle_career` orchestrator (coming soon).
+Skills work independently or chained together via the `mle_career` orchestrator.
 
 ---
 
@@ -12,18 +12,13 @@ Skills work independently or chained together via the `mle_career` orchestrator 
 |-------|---------|-------------|
 | `mle_interview` | `/mle_interview` | Adaptive mock technical interview (transformers, RLHF, RAG, CUDA, RecSys, and more). Exam or coach mode. Saves session file. |
 | `mle_resume` | `/mle_resume` | Scores, gives line-by-line feedback on, and rewrites your resume. Review mode (standalone) or tailor mode (target a specific job link). Supports English and Chinese. |
-
-### Coming Soon
-
-| Skill | What it does |
-|-------|-------------|
-| `mle_cold_outreach` | Drafts cold emails and LinkedIn DMs for recruiters, researchers, and hiring managers |
-| `mle_intro` | Coaches your "tell me about yourself" elevator pitch |
-| `mle_company_research` | Researches interview format, culture, and comp for a specific company and role |
-| `mle_behavioral` | Behavioral interview practice (STAR method) + story builder mode |
-| `mle_negotiate` | Offer negotiation strategy, counter-offer email drafting, and role-play |
-| `mle_offer_compare` | Compares 2–5 offers on total comp and non-comp dimensions |
-| `mle_career` | End-to-end career coach orchestrator that chains the skills above |
+| `mle_cold_outreach` | `/mle_cold_outreach` | Drafts recruiter emails, hiring-manager outreach, networking follow-ups, and LinkedIn DMs for ML/AI roles. |
+| `mle_intro` | `/mle_intro` | Coaches your "tell me about yourself" pitch for MLE, research, and applied scientist interviews. |
+| `mle_company_research` | `/mle_company_research` | Researches a target company, team, role, interview loop, compensation signals, and talking points. |
+| `mle_behavioral` | `/mle_behavioral` | Runs STAR-based behavioral interview practice and story-building for ML/AI job searches. |
+| `mle_negotiate` | `/mle_negotiate` | Builds negotiation strategy, counter-offer messaging, and role-play responses for offers. |
+| `mle_offer_compare` | `/mle_offer_compare` | Compares 2–5 offers across cash, equity, scope, growth, immigration, and lifestyle dimensions. |
+| `mle_career` | `/mle_career` | End-to-end ML/AI career coach that diagnoses your stage and orchestrates the right next deliverables. |
 
 ---
 
@@ -56,7 +51,7 @@ cp SKILL.md ~/.claude/skills/mle_interview/SKILL.md
 cp -r skills/* ~/.claude/skills/
 ```
 
-After installation, restart Claude Code and type `/mle_interview` or `/mle_resume` to get started.
+After installation, restart Claude Code and type `/mle_interview`, `/mle_resume`, or any of the other skill names above to get started.
 
 ---
 
@@ -101,7 +96,7 @@ All experience levels: new grad through staff+.
 
 一套 [Claude Code](https://claude.ai/code) 技能集合，覆盖 ML/AI 工程师求职的完整流程——从简历优化、冷启动拓展，到面试准备、薪资谈判与 Offer 选择。
 
-技能可单独使用，也可通过 `mle_career` 编排器串联（即将上线）。
+技能可单独使用，也可通过 `mle_career` 编排器串联。
 
 ---
 
@@ -111,18 +106,13 @@ All experience levels: new grad through staff+.
 |------|---------|---------|
 | `mle_interview` | `/mle_interview` | 自适应难度模拟技术面试（Transformer、RLHF、RAG、CUDA、推荐系统等）。支持纯练习模式和带反馈的教练模式。面试结束后自动保存记录文件。 |
 | `mle_resume` | `/mle_resume` | 对简历进行评分、逐条反馈并重写。支持通用优化模式（独立评审）和定向模式（针对指定职位链接进行改写）。支持中英文简历。 |
-
-### 即将上线
-
-| 技能 | 功能说明 |
-|------|---------|
-| `mle_cold_outreach` | 撰写发给招聘人员、研究员或 Hiring Manager 的冷启动邮件和 LinkedIn 私信 |
-| `mle_intro` | 辅导"自我介绍"电梯演讲 |
-| `mle_company_research` | 调研目标公司的面试流程、企业文化和薪资水平 |
-| `mle_behavioral` | 行为面试练习（STAR 方法）+ 故事挖掘模式（引导提问，帮你写出完整 STAR 回答） |
-| `mle_negotiate` | 薪资谈判策略、反 Offer 邮件起草与角色扮演练习 |
-| `mle_offer_compare` | 对比 2–5 个 Offer 的总薪酬和非薪酬维度，给出推荐 |
-| `mle_career` | 端到端求职教练编排器，串联上述所有技能 |
+| `mle_cold_outreach` | `/mle_cold_outreach` | 撰写发给招聘人员、研究员或 Hiring Manager 的冷启动邮件、跟进邮件和 LinkedIn 私信 |
+| `mle_intro` | `/mle_intro` | 辅导“自我介绍”电梯演讲，适配 MLE、研究工程师和应用科学家岗位 |
+| `mle_company_research` | `/mle_company_research` | 调研目标公司的面试流程、团队背景、文化和薪资信号，并整理成面试准备要点 |
+| `mle_behavioral` | `/mle_behavioral` | 行为面试练习（STAR 方法）+ 故事挖掘模式（引导提问，帮你写出完整 STAR 回答） |
+| `mle_negotiate` | `/mle_negotiate` | 薪资谈判策略、反 Offer 邮件起草与角色扮演练习 |
+| `mle_offer_compare` | `/mle_offer_compare` | 对比 2–5 个 Offer 的总薪酬和非薪酬维度，给出推荐 |
+| `mle_career` | `/mle_career` | 端到端求职教练编排器，诊断当前阶段并串联上述技能 |
 
 ---
 
@@ -155,7 +145,7 @@ cp SKILL.md ~/.claude/skills/mle_interview/SKILL.md
 cp -r skills/* ~/.claude/skills/
 ```
 
-安装完成后重启 Claude Code，输入 `/mle_interview` 或 `/mle_resume` 即可开始使用。
+安装完成后重启 Claude Code，输入 `/mle_interview`、`/mle_resume` 或上表中的任意技能命令即可开始使用。
 
 ---
 
