@@ -19,6 +19,9 @@ Ask for:
 
 If crucial data is missing, ask only for the missing pieces needed to assess leverage.
 
+Once you have everything, confirm with a single line:
+`Got it. Building a negotiation plan for **[target company/role]** via **[negotiation channel]**.`
+
 ## Workflow
 
 ### Step 1: Leverage Assessment
@@ -59,6 +62,61 @@ If the user wants call prep, write a talking script with likely recruiter respon
 Write:
 
 `mle_negotiate_<YYYY-MM-DD>.md`
+
+**File format:**
+
+````
+# MLE Negotiation Session — [YYYY-MM-DD]
+**Company/Role:** [target company/role] | **Channel:** [negotiation channel]
+
+---
+
+## Offer Snapshot
+
+- Base: [value]
+- Bonus: [value]
+- Equity: [value]
+- Sign-on: [value]
+- Level: [value]
+- Location: [value]
+- Deadlines: [value]
+- Competing processes: [value or "None provided"]
+
+---
+
+## User Priorities
+
+- [priority]
+
+---
+
+## Leverage Assessment
+
+- Negotiation leverage: [low/medium/high]
+- Why: [text]
+- Most movable components: [text]
+- Biggest mistake to avoid: [text]
+
+---
+
+## Strategy
+
+1. [step]
+2. [step]
+3. [step]
+
+---
+
+## Script / Draft
+
+[email draft or call script]
+
+---
+
+## Risk Notes
+
+- [bullet]
+````
 
 Then print:
 

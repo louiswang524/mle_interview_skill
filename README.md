@@ -30,9 +30,11 @@ Skills work independently or chained together via the `mle_career` orchestrator.
 # Clone the repo
 git clone https://github.com/louiswang524/mle_interview_skill.git
 
-# Copy the skill you want to your Claude Code skills directory
+# Copy one skill into your Claude Code skills directory
+cp -r mle_interview_skill/skills/<skill_name> ~/.claude/skills/<skill_name>
+
+# Example
 cp -r mle_interview_skill/skills/mle_resume ~/.claude/skills/mle_resume
-cp -r mle_interview_skill/skills/mle_interview ~/.claude/skills/mle_interview
 ```
 
 ### Install all skills
@@ -180,9 +182,11 @@ All experience levels: new grad through staff+.
 # 克隆仓库
 git clone https://github.com/louiswang524/mle_interview_skill.git
 
-# 将所需技能复制到 Claude Code 技能目录
+# 将单个技能复制到 Claude Code 技能目录
+cp -r mle_interview_skill/skills/<skill_name> ~/.claude/skills/<skill_name>
+
+# 示例
 cp -r mle_interview_skill/skills/mle_resume ~/.claude/skills/mle_resume
-cp -r mle_interview_skill/skills/mle_interview ~/.claude/skills/mle_interview
 ```
 
 ### 安装全部技能

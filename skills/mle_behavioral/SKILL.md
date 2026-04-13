@@ -17,6 +17,9 @@ Ask for:
 4. **Number of questions or stories**
 5. **Relevant background examples** the user can draw from
 
+Once you have everything, confirm with a single line:
+`Got it. Running **[mode]** behavioral prep for **[target role / level]** across **[number]** question(s)/story(ies).`
+
 ## Mode Rules
 
 ### Practice Mode
@@ -31,6 +34,7 @@ For each question:
    - **What was missing**
    - **How to strengthen the STAR structure**
 5. Provide a tighter rewritten answer
+6. Record the question, user answer, score, feedback, and rewritten answer for the session file
 
 ### Story Builder Mode
 
@@ -62,6 +66,81 @@ Write:
 
 `mle_behavioral_<mode>_<YYYY-MM-DD>.md`
 
-Include prompts, user answers, feedback, and final rewritten stories. Then print:
+**File format — Practice mode:**
+
+````
+# MLE Behavioral Session — [YYYY-MM-DD]
+**Mode:** practice | **Role/Level:** [target role / level]
+**Themes:** [theme list]
+
+---
+
+## Practice Log
+
+### Q[1]
+**Question:** [question]
+**Your Answer:** [user answer]
+**Score:** [X]/10
+**What worked:** [feedback]
+**What was missing:** [feedback]
+**How to strengthen the STAR structure:** [feedback]
+**Rewritten Answer:** [rewritten answer]
+
+[repeat for each question]
+
+---
+
+## Overall Themes
+
+### Strengths
+- [bullet]
+
+### Gaps
+- [bullet]
+
+### Recommended Stories To Build Next
+- [bullet]
+````
+
+**File format — Story builder mode:**
+
+````
+# MLE Behavioral Session — [YYYY-MM-DD]
+**Mode:** story_builder | **Role/Level:** [target role / level]
+**Themes:** [theme list]
+
+---
+
+## Raw Inputs
+
+- Background examples:
+  - [bullet]
+
+---
+
+## Story Pack
+
+### Story [N]
+**Situation:** [text]
+**Task:** [text]
+**Actions:** [text]
+**Results:** [text]
+**Reflection:** [text]
+
+**90-Second Answer:** [answer]
+**30-Second Answer:** [answer]
+**Suggested Follow-Up Questions:**
+- [question]
+
+[repeat for each story]
+
+---
+
+## Recommended Next Story Themes
+
+- [bullet]
+````
+
+Then print:
 
 `Session saved → /absolute/path/to/mle_behavioral_<mode>_<YYYY-MM-DD>.md`

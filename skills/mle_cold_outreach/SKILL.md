@@ -22,6 +22,9 @@ If the user already pasted a draft, treat it as the starting point and improve i
 
 If the request mentions a specific company or role and the user has not provided enough context, do a brief web check on the company, team, or job posting before drafting. Use only enough research to personalize the message accurately.
 
+Once you have everything, confirm with a single line:
+`Got it. Drafting **[channel]** outreach for **[target company/role]** with goal **[goal]**.`
+
 ## Workflow
 
 ### Step 1: Message Strategy
@@ -74,13 +77,57 @@ Write a markdown artifact to the current working directory:
 
 `mle_cold_outreach_<YYYY-MM-DD>.md`
 
-Include:
+**File format:**
 
-1. Target summary
-2. Strategy notes
-3. Primary draft
-4. Two variants
-5. Send notes
+````
+# MLE Cold Outreach Session — [YYYY-MM-DD]
+**Target:** [outreach target] | **Channel:** [email/LinkedIn DM/follow-up]
+**Goal:** [goal] | **Company/Role:** [target company/role]
+
+---
+
+## Inputs
+
+- Background:
+  - [user background bullet]
+- Constraints:
+  - [constraint or "None provided"]
+- Existing Draft:
+  [user draft or "None provided"]
+
+---
+
+## Strategy
+
+- Why this contact is plausible
+- Strongest credibility signal
+- Single ask
+- Biggest risk to avoid
+
+---
+
+## Primary Draft
+
+[subject line if email]
+
+[primary draft]
+
+---
+
+## Variants
+
+### Shorter Version
+[draft]
+
+### Warmer Version
+[draft]
+
+---
+
+## Send Notes
+
+- [send note]
+````
 
 After writing the file, print:
 

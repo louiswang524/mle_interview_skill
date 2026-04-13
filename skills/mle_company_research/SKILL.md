@@ -19,6 +19,9 @@ Ask for:
 
 If the user gives a job link, fetch it. Also search for recent official company pages and credible public sources relevant to the goal.
 
+Once you have everything, confirm with a single line:
+`Got it. Researching **[company]** for **[goal]** around **[role]**.`
+
 ## Research Rules
 
 - Prefer primary sources first: company job pages, engineering blogs, research pages, product pages
@@ -65,6 +68,59 @@ If the user asks about pay, provide a clearly labeled compensation snapshot with
 Write:
 
 `mle_company_research_<company-slug>_<YYYY-MM-DD>.md`
+
+**File format:**
+
+````
+# MLE Company Research — [Company] — [YYYY-MM-DD]
+**Role:** [role or "Not specified"] | **Goal:** [goal]
+**Location:** [location or "Not specified"]
+
+---
+
+## Inputs
+
+- User priorities:
+  - [priority]
+- Job link:
+  [link or "None provided"]
+
+---
+
+## Role Snapshot
+
+- [snapshot bullet]
+
+---
+
+## What They Likely Care About
+
+- [bullet]
+
+---
+
+## Interview Prep Priorities
+
+- [bullet]
+
+---
+
+## Talking Points For The User
+
+- [bullet]
+
+---
+
+## Risks / Open Questions
+
+- [bullet]
+
+---
+
+## Sources
+
+- [source title] — [URL]
+````
 
 Then print:
 

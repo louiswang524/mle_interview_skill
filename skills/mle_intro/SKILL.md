@@ -19,6 +19,9 @@ Ask for these together:
 
 If the user already has a draft, critique and rewrite it rather than starting blank.
 
+Once you have everything, confirm with a single line:
+`Got it. Building a **[desired length]** intro for **[target role]** at the **[interview stage]** stage.`
+
 ## Workflow
 
 ### Step 1: Positioning
@@ -72,6 +75,56 @@ Write:
 
 `mle_intro_<YYYY-MM-DD>.md`
 
-Include the setup inputs, main intro, variants, and delivery notes. Then print:
+**File format:**
+
+````
+# MLE Intro Session — [YYYY-MM-DD]
+**Target Role:** [role] | **Company:** [company or company type]
+**Stage:** [interview stage] | **Length:** [desired length]
+
+---
+
+## Inputs
+
+- Background:
+  - [background bullet]
+- Existing Draft:
+  [user draft or "None provided"]
+
+---
+
+## Positioning
+
+- Core professional identity
+- Most relevant proof points
+- Angle to emphasize
+
+---
+
+## Main Intro
+
+[main introduction]
+
+---
+
+## Variants
+
+### Concise Version
+[version]
+
+### Technical-Heavy Version
+[version]
+
+### Leadership-Heavy Version
+[version or "Not applicable for this level"]
+
+---
+
+## Delivery Notes
+
+- [delivery note]
+````
+
+Then print:
 
 `Session saved → /absolute/path/to/mle_intro_<YYYY-MM-DD>.md`

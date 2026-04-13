@@ -18,6 +18,9 @@ Ask for:
 5. **Biggest bottleneck**
 6. **Any existing materials** — resume, outreach draft, job links, offer details, interview topics
 
+Once you have everything, confirm with a single line:
+`Got it. Diagnosing your search for **[primary goal]** over **[time horizon]**.`
+
 ## Routing Logic
 
 Map the user's needs to the right sub-workflow:
@@ -31,7 +34,7 @@ Map the user's needs to the right sub-workflow:
 - Negotiation -> `mle_negotiate`
 - Offer decision -> `mle_offer_compare`
 
-You do not need to literally invoke another skill. You may produce the needed output directly, but keep the workflow boundaries above so the user gets the right artifact.
+Keep the deliverable aligned with the routed sub-workflow. The artifact you produce must match the structure that sub-skill would normally produce, even if you do not literally invoke it.
 
 ## Core Workflow
 
@@ -63,6 +66,8 @@ Create the single most useful artifact for the current stage. Examples:
 - negotiation script
 - offer comparison table
 
+For this step, prefer the routed sub-workflow with the highest immediate leverage. State which sub-workflow you selected.
+
 ### Step 4: Optional Next Modules
 
 List up to 3 follow-on modules with one-line explanations.
@@ -73,6 +78,62 @@ Write:
 
 `mle_career_<YYYY-MM-DD>.md`
 
-Include diagnosis, action plan, core artifact, and follow-on modules. Then print:
+**File format:**
+
+````
+# MLE Career Session — [YYYY-MM-DD]
+**Primary Goal:** [goal] | **Current Stage:** [stage]
+**Time Horizon:** [time horizon]
+
+---
+
+## Inputs
+
+- Target roles and companies:
+  - [entry]
+- Biggest bottleneck: [text]
+- Existing materials:
+  - [material or "None provided"]
+
+---
+
+## Diagnosis
+
+- Search stage: [text]
+- Biggest bottleneck: [text]
+- Highest-leverage next action: [text]
+
+---
+
+## 2-Week Plan
+
+### Next 48 Hours
+- [action]
+
+### This Week
+- [action]
+
+### Next Week
+- [action]
+
+### Success Metrics
+- [metric]
+
+---
+
+## Core Artifact
+
+**Selected Sub-Workflow:** [skill name]
+
+[artifact content]
+
+---
+
+## Follow-On Modules
+
+- [module] — [one-line explanation]
+````
+
+Then print:
 
 `Session saved → /absolute/path/to/mle_career_<YYYY-MM-DD>.md`
