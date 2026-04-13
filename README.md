@@ -32,9 +32,7 @@ git clone https://github.com/louiswang524/mle_interview_skill.git
 
 # Copy the skill you want to your Claude Code skills directory
 cp -r mle_interview_skill/skills/mle_resume ~/.claude/skills/mle_resume
-
-# The root SKILL.md is the mle_interview skill
-cp mle_interview_skill/SKILL.md ~/.claude/skills/mle_interview/SKILL.md
+cp -r mle_interview_skill/skills/mle_interview ~/.claude/skills/mle_interview
 ```
 
 ### Install all skills
@@ -42,10 +40,6 @@ cp mle_interview_skill/SKILL.md ~/.claude/skills/mle_interview/SKILL.md
 ```bash
 git clone https://github.com/louiswang524/mle_interview_skill.git
 cd mle_interview_skill
-
-# mle_interview (root skill)
-mkdir -p ~/.claude/skills/mle_interview
-cp SKILL.md ~/.claude/skills/mle_interview/SKILL.md
 
 # All skills in skills/
 cp -r skills/* ~/.claude/skills/
@@ -126,9 +120,7 @@ git clone https://github.com/louiswang524/mle_interview_skill.git
 
 # 将所需技能复制到 Claude Code 技能目录
 cp -r mle_interview_skill/skills/mle_resume ~/.claude/skills/mle_resume
-
-# 根目录的 SKILL.md 是 mle_interview 技能
-cp mle_interview_skill/SKILL.md ~/.claude/skills/mle_interview/SKILL.md
+cp -r mle_interview_skill/skills/mle_interview ~/.claude/skills/mle_interview
 ```
 
 ### 安装全部技能
@@ -136,10 +128,6 @@ cp mle_interview_skill/SKILL.md ~/.claude/skills/mle_interview/SKILL.md
 ```bash
 git clone https://github.com/louiswang524/mle_interview_skill.git
 cd mle_interview_skill
-
-# mle_interview（根目录技能）
-mkdir -p ~/.claude/skills/mle_interview
-cp SKILL.md ~/.claude/skills/mle_interview/SKILL.md
 
 # skills/ 目录下的所有技能
 cp -r skills/* ~/.claude/skills/
