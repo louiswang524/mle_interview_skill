@@ -69,6 +69,68 @@ Resume review and rewrite. You choose:
 
 In tailor mode, the skill fetches the job description, runs a gap analysis, and rewrites your resume to match the role.
 
+### `/mle_cold_outreach`
+
+Cold outreach drafting for ML/AI job searches. You choose:
+- **Target** — recruiter, hiring manager, researcher, alumni, founder, or referral contact
+- **Channel** — email, LinkedIn DM, or follow-up reply
+- **Goal** — referral request, intro call, application follow-up, research collaboration, or direct role interest
+
+The skill produces a primary draft, two variants, and send-timing notes.
+
+### `/mle_intro`
+
+Interview self-introduction coaching. You choose:
+- **Target role and company**
+- **Interview stage** — recruiter screen, hiring manager, technical loop, executive, networking, etc.
+- **Desired length** — 30 seconds, 60 seconds, 2 minutes, or custom
+
+The skill writes a polished “tell me about yourself” answer plus concise and audience-specific variants.
+
+### `/mle_company_research`
+
+Company and role research for interview prep or offer diligence. You choose:
+- **Company**
+- **Role or job link**
+- **Goal** — interview prep, application strategy, networking prep, or offer diligence
+
+The skill summarizes likely role expectations, prep priorities, user-specific talking points, and sources.
+
+### `/mle_behavioral`
+
+Behavioral interview practice and STAR story building. You choose:
+- **Mode** — `practice` or `story_builder`
+- **Target role / level**
+- **Themes** — leadership, conflict, failure, ambiguity, execution, mentoring, etc.
+
+The skill either runs scored behavioral practice or turns rough experiences into reusable STAR answers.
+
+### `/mle_negotiate`
+
+Offer negotiation coaching. You provide:
+- **Offer details** — base, bonus, equity, sign-on, level, location, deadlines
+- **Other active processes**
+- **Negotiation channel** — recruiter call, email, or live conversation
+
+The skill assesses leverage, recommends a strategy, and drafts negotiation language or call scripts.
+
+### `/mle_offer_compare`
+
+Multi-offer comparison for ML/AI roles. You provide:
+- **2–5 offers** with comp, level, location, work model, and scope details
+- **Your priorities** — cash, upside, scope, research fit, lifestyle, immigration, etc.
+
+The skill compares offers across comp and non-comp dimensions, recommends a top choice, and highlights negotiation opportunities.
+
+### `/mle_career`
+
+End-to-end career coaching and search planning. You provide:
+- **Primary goal** — land interviews, convert interviews, negotiate, compare offers, or general strategy
+- **Current stage** — resume, applications, networking, interviewing, or offer stage
+- **Biggest bottleneck** and any existing materials
+
+The skill diagnoses the search stage, creates a 2-week action plan, and delivers the highest-leverage artifact for that stage.
+
 ---
 
 ## Target Roles
@@ -156,6 +218,68 @@ cp -r skills/* ~/.claude/skills/
 - **语言** — 根据简历内容自动识别（中文或英文）
 
 定向模式下，技能会自动抓取职位描述，进行差距分析，并将简历改写为与职位高度匹配的版本。
+
+### `/mle_cold_outreach`
+
+面向 ML/AI 求职场景的冷启动沟通文案。你可以提供：
+- **联系对象** — recruiter、hiring manager、researcher、校友、founder 或内推联系人
+- **渠道** — 邮件、LinkedIn 私信或跟进回复
+- **目标** — 求内推、约沟通、申请跟进、研究合作或表达岗位兴趣
+
+该技能会输出主版本文案、两个变体，以及发送和跟进建议。
+
+### `/mle_intro`
+
+“自我介绍 / tell me about yourself” 辅导。你可以提供：
+- **目标岗位和公司**
+- **面试阶段** — recruiter screen、hiring manager、technical loop、executive、networking 等
+- **时长要求** — 30 秒、60 秒、2 分钟或自定义
+
+该技能会产出主版本自我介绍，以及更精简或更偏技术/领导力的变体。
+
+### `/mle_company_research`
+
+用于面试准备或 offer 尽调的公司/岗位调研。你可以提供：
+- **公司**
+- **岗位或职位链接**
+- **目标** — 面试准备、申请策略、关系拓展准备或 offer 尽调
+
+该技能会整理岗位关注点、准备重点、与你背景匹配的 talking points，以及信息来源。
+
+### `/mle_behavioral`
+
+行为面试练习与 STAR 故事打磨。你可以选择：
+- **模式** — `practice` 或 `story_builder`
+- **目标岗位 / 级别**
+- **主题** — 领导力、冲突、失败、模糊问题、执行力、带人等
+
+该技能可以进行带评分的行为面练习，或把零散经历整理成可复用的 STAR 回答。
+
+### `/mle_negotiate`
+
+Offer 谈判辅导。你可以提供：
+- **Offer 细节** — base、bonus、equity、sign-on、级别、地点、截止时间
+- **其他进行中的流程**
+- **沟通渠道** — recruiter 电话、邮件或现场沟通
+
+该技能会评估谈判筹码、给出策略，并起草邮件或通话脚本。
+
+### `/mle_offer_compare`
+
+多 offer 对比决策。你可以提供：
+- **2–5 个 offer**，包含薪酬、级别、地点、办公模式和职责范围
+- **你的优先级** — 现金、上升空间、scope、研究契合度、生活方式、身份等
+
+该技能会从薪酬和非薪酬维度对比多个 offer，给出推荐，并指出每个 offer 的谈判机会。
+
+### `/mle_career`
+
+端到端求职规划与职业教练。你可以提供：
+- **主要目标** — 拿面试、提升面试转化、谈 offer、比较 offer 或整体求职策略
+- **当前阶段** — 简历、投递、拓展关系、面试中或 offer 阶段
+- **最大瓶颈** 以及现有材料
+
+该技能会判断当前求职阶段，给出两周行动计划，并产出当前阶段最有价值的交付物。
 
 ---
 
